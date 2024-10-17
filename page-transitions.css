@@ -1,0 +1,81 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      transition: background-color 0.6s ease, color 0.6s ease;
+      overflow-x: hidden;
+}
+
+.navbar {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      padding: 15px 0;
+}
+
+.nav-link {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+      color: #ff6f61;
+}
+
+.page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+}
+
+.page h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #fff;
+}
+
+.page p {
+      font-size: 1.5rem;
+      color: #f0f0f0;
+}
+
+/* Home Page */
+.home-page {
+      background: linear-gradient(135deg, #f12711, #f5af19);
+}
+
+/* About Page */
+.about-page {
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+}
+
+/* Contact Page */
+.contact-page {
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+/* Active Page Styling */
+.page.active {
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 1;
+}
